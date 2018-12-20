@@ -3,9 +3,9 @@ import android.content.Context;
 
 import net.sqlcipher.database.SQLiteDatabase;
 
-import org.researchstack.backbone.storage.database.sqlite.SqlCipherDatabaseHelper;
-import org.researchstack.backbone.storage.database.sqlite.UpdatablePassphraseProvider;
-import org.researchstack.backbone.utils.LogExt;
+import org.researchstack.feature.storage.database.sqlite.SqlCipherDatabaseHelper;
+import org.researchstack.feature.storage.database.sqlite.UpdatablePassphraseProvider;
+import org.researchstack.foundation.components.utils.LogExt;
 
 import java.sql.SQLException;
 import java.util.List;

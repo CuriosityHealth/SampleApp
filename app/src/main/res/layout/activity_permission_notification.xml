@@ -34,7 +34,7 @@
         android:text="@string/rss_permission_notification_desc_long"
     />
 
-    <org.researchstack.backbone.ui.views.SubmitBar
+    <org.researchstack.foundation.components.common.ui.views.SubmitBar
         android:id="@+id/submit_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

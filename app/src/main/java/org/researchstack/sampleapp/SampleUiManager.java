@@ -1,14 +1,11 @@
 package org.researchstack.sampleapp;
 import android.content.Context;
 
-import org.researchstack.backbone.answerformat.AnswerFormat;
-import org.researchstack.backbone.answerformat.ChoiceAnswerFormat;
-import org.researchstack.backbone.answerformat.BooleanAnswerFormat;
-import org.researchstack.backbone.model.Choice;
-import org.researchstack.backbone.result.StepResult;
-import org.researchstack.backbone.step.QuestionStep;
-import org.researchstack.backbone.step.FormStep;
-import org.researchstack.backbone.step.Step;
+import org.researchstack.foundation.components.survey.answerformat.BooleanAnswerFormat;
+import org.researchstack.foundation.components.survey.step.FormStep;
+import org.researchstack.foundation.components.survey.step.QuestionStep;
+import org.researchstack.foundation.core.models.result.StepResult;
+import org.researchstack.foundation.core.models.step.Step;
 import org.researchstack.skin.ActionItem;
 import org.researchstack.skin.UiManager;
 import org.researchstack.skin.task.OnboardingTask;

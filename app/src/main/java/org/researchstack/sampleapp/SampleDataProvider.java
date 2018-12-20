@@ -1,8 +1,8 @@
 package org.researchstack.sampleapp;
 import android.content.Context;
 
-import org.researchstack.backbone.ResourcePathManager;
-import org.researchstack.backbone.result.TaskResult;
+import org.researchstack.foundation.components.singletons.ResourcePathManager;
+import org.researchstack.foundation.core.models.result.TaskResult;
 import org.researchstack.sampleapp.bridge.BridgeDataProvider;
 import org.researchstack.skin.ResourceManager;
 

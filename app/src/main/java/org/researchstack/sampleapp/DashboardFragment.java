@@ -20,11 +20,11 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
-import org.researchstack.backbone.ui.graph.BarChartCard;
-import org.researchstack.backbone.ui.graph.LineChartCard;
-import org.researchstack.backbone.ui.graph.PieChartCard;
-import org.researchstack.backbone.ui.graph.ProgressChartCard;
-import org.researchstack.backbone.utils.ThemeUtils;
+import org.researchstack.feature.chart.ui.graph.BarChartCard;
+import org.researchstack.feature.chart.ui.graph.LineChartCard;
+import org.researchstack.feature.chart.ui.graph.PieChartCard;
+import org.researchstack.feature.chart.ui.graph.ProgressChartCard;
+import org.researchstack.foundation.components.utils.ThemeUtils;
 import org.researchstack.skin.R;
 
 import java.text.NumberFormat;

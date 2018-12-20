@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.Application;
 import android.content.Context;
 import android.os.Build;
-import android.support.multidex.MultiDex;
 
 import org.researchstack.skin.PermissionRequestManager;
 import org.researchstack.skin.ResearchStack;
@@ -55,11 +54,11 @@ public class SampleApplication extends Application
         PermissionRequestManager.getInstance().addPermission(notifications);
     }
 
-    @Override
-    protected void attachBaseContext(Context base)
-    {
-        // This is needed for android versions < 5.0 or you can extend MultiDexApplication
-        super.attachBaseContext(base);
-        MultiDex.install(this);
-    }
+//    @Override
+//    protected void attachBaseContext(Context base)
+//    {
+//        // This is needed for android versions < 5.0 or you can extend MultiDexApplication
+//        super.attachBaseContext(base);
+//        MultiDex.install(this);
+//    }
 }

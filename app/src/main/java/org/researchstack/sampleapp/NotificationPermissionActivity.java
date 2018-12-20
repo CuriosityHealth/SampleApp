@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import org.researchstack.backbone.ui.PinCodeActivity;
-import org.researchstack.backbone.ui.views.SubmitBar;
+import org.researchstack.foundation.components.common.ui.views.SubmitBar;
 
 public class NotificationPermissionActivity extends PinCodeActivity
 {

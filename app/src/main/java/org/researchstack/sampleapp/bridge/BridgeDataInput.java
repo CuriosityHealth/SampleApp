@@ -3,7 +3,7 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 
-import org.researchstack.backbone.StorageAccess;
+import org.researchstack.feature.storage.StorageAccess;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;

@@ -5,9 +5,9 @@ import android.util.Base64;
 
 import com.google.gson.Gson;
 
-import org.researchstack.backbone.ResourcePathManager;
-import org.researchstack.backbone.utils.FileUtils;
-import org.researchstack.backbone.utils.LogExt;
+import org.researchstack.feature.storage.utils.FileUtils;
+import org.researchstack.foundation.components.singletons.ResourcePathManager;
+import org.researchstack.foundation.components.utils.LogExt;
 import org.spongycastle.cms.CMSAlgorithm;
 import org.spongycastle.cms.CMSEnvelopedData;
 import org.spongycastle.cms.CMSEnvelopedDataGenerator;

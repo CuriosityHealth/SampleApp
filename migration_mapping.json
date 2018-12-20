@@ -1,33 +1,38 @@
 {
     "replace": [
         {
-            "from": "import org.researchstack.backbone.answerformat.AnswerFormat"
+            "from": "org.researchstack.backbone.answerformat.AnswerFormat",
+            "to": "org.researchstack.foundation.components.survey.answerformat.AnswerFormat"
         },
         {
-            "from": "import org.researchstack.backbone.answerformat.ChoiceAnswerFormat"
+            "from": "org.researchstack.backbone.answerformat.ChoiceAnswerFormat"
         },
         {
-            "from": "import org.researchstack.backbone.answerformat.BooleanAnswerFormat",
-            "to": "import org.researchstack.foundation.components.survey.answerformat.BooleanAnswerFormat"
+            "from": "org.researchstack.backbone.answerformat.BooleanAnswerFormat",
+            "to": "org.researchstack.foundation.components.survey.answerformat.BooleanAnswerFormat"
         },
         {
-            "from": "import org.researchstack.backbone.model.Choice"
+            "from": "org.researchstack.backbone.model.Choice"
         },
         {
-            "from": "import org.researchstack.backbone.result.StepResult",
-            "to": "import org.researchstack.foundation.core.models.result.StepResult"
+            "from": "org.researchstack.backbone.result.StepResult",
+            "to": "org.researchstack.foundation.core.models.result.StepResult"
         },
         {
-            "from": "import org.researchstack.backbone.step.QuestionStep",
-            "to": "import org.researchstack.foundation.components.survey.step.QuestionStep"
+            "from": "org.researchstack.backbone.step.QuestionStep",
+            "to": "org.researchstack.foundation.components.survey.step.QuestionStep"
         },
         {
-            "from": "import org.researchstack.backbone.step.FormStep",
-            "to": "import org.researchstack.foundation.components.survey.step.FormStep"
+            "from": "org.researchstack.backbone.step.FormStep",
+            "to": "org.researchstack.foundation.components.survey.step.FormStep"
         },
         {
-            "from": "import org.researchstack.backbone.step.Step",
-            "to": "import org.researchstack.foundation.core.models.step.Step"
+            "from": "org.researchstack.backbone.step.Step",
+            "to": "org.researchstack.foundation.core.models.step.Step"
+        },
+        {
+            "from": "org.researchstack.backbone.utils.FormatHelper",
+            "to": "org.researchstack.foundation.components.utils.FormatHelper"
         }
         
     ]

@@ -1,7 +1,10 @@
 package org.researchstack.sampleapp.bridge.body;
-import org.researchstack.backbone.answerformat.AnswerFormat;
-import org.researchstack.backbone.result.StepResult;
-import org.researchstack.backbone.utils.FormatHelper;
+
+import org.researchstack.foundation.components.survey.answerformat.AnswerFormat;
+import org.researchstack.foundation.components.survey.step.QuestionStep;
+import org.researchstack.foundation.components.utils.FormatHelper;
+import org.researchstack.foundation.core.models.result.StepResult;
+import org.researchstack.foundation.core.models.step.Step;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,50 +21,64 @@ public class SurveyAnswer
 
     public SurveyAnswer(StepResult stepResult)
     {
-        AnswerFormat.Type type = (AnswerFormat.Type) stepResult.getAnswerFormat().getQuestionType();
-        this.questionType = type.ordinal();
-        this.questionTypeName = type.name();
-        this.startDate = FormatHelper.DEFAULT_FORMAT.format(stepResult.getStartDate());
-        this.item = stepResult.getIdentifier();
-        this.endDate = FormatHelper.DEFAULT_FORMAT.format(stepResult.getEndDate());
-
+        Step step = stepResult.getStep();
+        if (step instanceof QuestionStep) {
+            AnswerFormat answerFormat = ((QuestionStep) step).getAnswerFormat();
+            AnswerFormat.Type type = (AnswerFormat.Type) answerFormat.getQuestionType();
+            this.questionType = type.ordinal();
+            this.questionTypeName = type.name();
+            this.startDate = FormatHelper.DEFAULT_FORMAT.format(stepResult.getStartDate());
+            this.item = stepResult.getIdentifier();
+            this.endDate = FormatHelper.DEFAULT_FORMAT.format(stepResult.getEndDate());
+        }
+        else {
+            throw new RuntimeException("Step must be a question step");
+        }
     }
 
     public static SurveyAnswer create(StepResult stepResult)
     {
-        AnswerFormat.Type type = (AnswerFormat.Type) stepResult.getAnswerFormat().getQuestionType();
-        SurveyAnswer answer;
-        switch(type)
-        {
-            case SingleChoice:
-            case MultipleChoice:
-                answer = new ChoiceSurveyAnswer(stepResult);
-                break;
-            case Integer:
-                answer = new NumericSurveyAnswer(stepResult);
-                break;
-            case Boolean:
-                answer = new BooleanSurveyAnswer(stepResult);
-                break;
-            case Text:
-                answer = new TextSurveyAnswer(stepResult);
-                break;
-            case Date:
-                answer = new DateSurveyAnswer(stepResult);
-                break;
-            case None:
-            case Scale:
-            case Decimal:
-            case Eligibility:
-            case TimeOfDay:
-            case DateAndTime:
-            case TimeInterval:
-            case Location:
-            case Form:
-            default:
-                throw new RuntimeException("Cannot upload this question type to bridge");
+        Step step = stepResult.getStep();
+        if (step instanceof QuestionStep) {
+            AnswerFormat answerFormat = ((QuestionStep) step).getAnswerFormat();
+            AnswerFormat.Type type = (AnswerFormat.Type) answerFormat.getQuestionType();
+            SurveyAnswer answer;
+            switch(type)
+            {
+                case SingleChoice:
+                case MultipleChoice:
+                    answer = new ChoiceSurveyAnswer(stepResult);
+                    break;
+                case Integer:
+                    answer = new NumericSurveyAnswer(stepResult);
+                    break;
+                case Boolean:
+                    answer = new BooleanSurveyAnswer(stepResult);
+                    break;
+                case Text:
+                    answer = new TextSurveyAnswer(stepResult);
+                    break;
+                case Date:
+                    answer = new DateSurveyAnswer(stepResult);
+                    break;
+                case None:
+                case Scale:
+                case Decimal:
+                case Eligibility:
+                case TimeOfDay:
+                case DateAndTime:
+                case TimeInterval:
+                case Location:
+                case Form:
+                default:
+                    throw new RuntimeException("Cannot upload this question type to bridge");
+            }
+            return answer;
         }
-        return answer;
+        else {
+            throw new RuntimeException("Step must be a question step");
+        }
+
     }
 
     public static class BooleanSurveyAnswer extends SurveyAnswer

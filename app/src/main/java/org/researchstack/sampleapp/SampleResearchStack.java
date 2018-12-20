@@ -4,14 +4,14 @@ import android.content.Context;
 
 import net.sqlcipher.database.SQLiteDatabase;
 
-import org.researchstack.backbone.storage.database.AppDatabase;
-import org.researchstack.backbone.storage.database.sqlite.SqlCipherDatabaseHelper;
-import org.researchstack.backbone.storage.database.sqlite.UpdatablePassphraseProvider;
-import org.researchstack.backbone.storage.file.EncryptionProvider;
-import org.researchstack.backbone.storage.file.FileAccess;
-import org.researchstack.backbone.storage.file.PinCodeConfig;
-import org.researchstack.backbone.storage.file.SimpleFileAccess;
-import org.researchstack.backbone.storage.file.aes.AesProvider;
+import org.researchstack.feature.authentication.pincode.PinCodeConfig;
+import org.researchstack.feature.storage.database.AppDatabase;
+import org.researchstack.feature.storage.database.sqlite.SqlCipherDatabaseHelper;
+import org.researchstack.feature.storage.database.sqlite.UpdatablePassphraseProvider;
+import org.researchstack.feature.storage.file.EncryptionProvider;
+import org.researchstack.feature.storage.file.FileAccess;
+import org.researchstack.feature.storage.file.SimpleFileAccess;
+import org.researchstack.feature.storage.file.aes.AesProvider;
 import org.researchstack.sampleapp.bridge.BridgeEncryptedDatabase;
 import org.researchstack.skin.AppPrefs;
 import org.researchstack.skin.DataProvider;
