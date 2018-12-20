@@ -1,0 +1,34 @@
+{
+    "replace": [
+        {
+            "from": "import org.researchstack.backbone.answerformat.AnswerFormat"
+        },
+        {
+            "from": "import org.researchstack.backbone.answerformat.ChoiceAnswerFormat"
+        },
+        {
+            "from": "import org.researchstack.backbone.answerformat.BooleanAnswerFormat",
+            "to": "import org.researchstack.foundation.components.survey.answerformat.BooleanAnswerFormat"
+        },
+        {
+            "from": "import org.researchstack.backbone.model.Choice"
+        },
+        {
+            "from": "import org.researchstack.backbone.result.StepResult",
+            "to": "import org.researchstack.foundation.core.models.result.StepResult"
+        },
+        {
+            "from": "import org.researchstack.backbone.step.QuestionStep",
+            "to": "import org.researchstack.foundation.components.survey.step.QuestionStep"
+        },
+        {
+            "from": "import org.researchstack.backbone.step.FormStep",
+            "to": "import org.researchstack.foundation.components.survey.step.FormStep"
+        },
+        {
+            "from": "import org.researchstack.backbone.step.Step",
+            "to": "import org.researchstack.foundation.core.models.step.Step"
+        }
+        
+    ]
+}

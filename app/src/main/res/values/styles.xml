@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.Sample.IconTabLayout" parent="@style/Widget.Backbone.IconTabLayout">
+    <style name="Widget.Sample.IconTabLayout" parent="@style/Widget.Foundation.IconTabLayout">
         <item name="tabIconColor">@android:color/white</item>
         <item name="tabIconIndicatorColor">@color/rsb_error</item>
         <item name="tabTextColor">@color/tab_text_color</item>
     </style>
 
-    <style name="Widget.Sample.SubmitBar" parent="@style/Widget.Backbone.SubmitBar"/>
+    <style name="Widget.Sample.SubmitBar" parent="@style/Widget.Foundation.SubmitBar"/>
 
     <style name="Base.Widget.Sample.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
         <item name="android:background">?attr/colorPrimary</item>
@@ -33,7 +33,7 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="Widget.Sample.EmptyView" parent="@style/Widget.Backbone.EmptyView">
+    <style name="Widget.Sample.EmptyView" parent="@style/Widget.Feature.Chart.EmptyView">
         <item name="android:background">@android:color/white</item>
     </style>
 
