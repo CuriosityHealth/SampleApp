@@ -20,10 +20,10 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
-import org.researchstack.feature.chart.ui.graph.BarChartCard;
-import org.researchstack.feature.chart.ui.graph.LineChartCard;
-import org.researchstack.feature.chart.ui.graph.PieChartCard;
-import org.researchstack.feature.chart.ui.graph.ProgressChartCard;
+import org.researchstack.feature.chart.ui.BarChartCard;
+import org.researchstack.feature.chart.ui.LineChartCard;
+import org.researchstack.feature.chart.ui.PieChartCard;
+import org.researchstack.feature.chart.ui.ProgressChartCard;
 import org.researchstack.foundation.components.utils.ThemeUtils;
 import org.researchstack.skin.R;
 

@@ -152,8 +152,8 @@ public class SampleTaskProvider extends TaskProvider
         FormStep medicalInfoForm = new FormStep("medicalInfo", "Medical Information", "");
         medicalInfoForm.setStepTitle(R.string.task_inital_toolbar_title);
 
-        BooleanAnswerFormat booleanAnswerFormat = new BooleanAnswerFormat(context.getString(R.string.rsb_yes),
-                context.getString(R.string.rsb_no));
+        BooleanAnswerFormat booleanAnswerFormat = new BooleanAnswerFormat(context.getString(R.string.rsf_yes),
+                context.getString(R.string.rsf_no));
 
         QuestionStep robotStep = new QuestionStep("confirmRobot",
                 "Are you a robot?",
